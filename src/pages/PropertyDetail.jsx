@@ -1023,7 +1023,7 @@ const PropertyDetail = () => {
             className="max-h-[90vh] max-w-[90vw] object-contain"
             src={
               property.image
-                ? `${import.meta.env.VITE_API_URL}${property.image}`
+                ? `${import.meta.env.VITE_API_BASE_URL}${property.image}`
                 : "/default-dorm.jpg"
             }
             alt={property.name}
@@ -1060,7 +1060,7 @@ const PropertyDetail = () => {
                       className={`overflow-hidden rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 w-full`}
                     >
                       <img
-                        src={`${import.meta.env.VITE_API_URL}${img}`}
+                        src={`${import.meta.env.VITE_API_BASE_URL}${img}`}
                         alt={`Room image ${idx + 1}`}
                         className="w-full aspect-[4/3] object-cover transition-transform duration-300 hover:scale-105"
                       />
