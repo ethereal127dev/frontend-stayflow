@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const PropertyCard = ({ property }) => {
 
   const imageUrl = property.image
-    ? `${import.meta.env.VITE_API_URL}${property.image}`
+    ? `${import.meta.env.VITE_API_BASE_URL}${property.image}`
     : "/default-dorm.jpg";
 
   console.log("IMAGE URL:", imageUrl);
