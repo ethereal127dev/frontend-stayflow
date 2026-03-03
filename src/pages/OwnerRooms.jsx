@@ -37,7 +37,7 @@ const OwnerRooms = () => {
 
     // แสดงเฉพาะไฟล์ที่อยู่ใน /uploads/
     if (img.startsWith("/uploads/")) {
-      return `http://localhost:5000${img}`;
+      return `${import.meta.env.VITE_API_BASE_URL}${img}`;
     }
 
     // ถ้าไม่ใช่ uploads ให้ใช้ default
