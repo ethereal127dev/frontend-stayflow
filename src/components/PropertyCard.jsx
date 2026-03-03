@@ -3,21 +3,22 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const PropertyCard = ({ property }) => {
-  
+
+  const imageUrl = property.image
+    ? `${import.meta.env.VITE_API_URL}${property.image}`
+    : "/default-dorm.jpg";
+
   console.log("IMAGE URL:", imageUrl);
+
   return (
     <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
       <div className="relative h-40 overflow-hidden">
         <img
-          src={
-            property.image
-              ? `${import.meta.env.VITE_API_URL}${property.image}`
-              : "/default-dorm.jpg"
-          }
+          src={imageUrl}
           alt={property.name}
           className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
         />
-        
+
 
         {/* <div className="absolute top-3 right-3 bg-white bg-opacity-90 rounded-full p-1.5 shadow-md">
           <i className="fas fa-heart text-gray-400 hover:text-red-500 transition-colors duration-300 text-sm"></i>
