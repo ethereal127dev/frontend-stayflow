@@ -840,7 +840,7 @@ const OwnerRooms = () => {
                           {existingImages.map((img, index) => (
                             <div key={index} className="relative w-24 h-24">
                               <img
-                                src={`${import.meta.env.VITE_API_URL}${img}`}
+                                src={`${import.meta.env.VITE_API_BASE_URL}${img}`}
                                 className="w-full h-full object-cover rounded-lg border"
                               />
                               <button

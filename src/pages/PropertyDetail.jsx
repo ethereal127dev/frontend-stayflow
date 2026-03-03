@@ -248,7 +248,7 @@ const PropertyDetail = () => {
                   <img
                     src={
                       property.image
-                        ? `${import.meta.env.VITE_API_URL}${property.image}`
+                        ? `${import.meta.env.VITE_API_BASE_URL}${property.image}`
                         : "/default-dorm.jpg"
                     }
                     alt={property.name}

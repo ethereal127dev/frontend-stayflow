@@ -399,7 +399,7 @@ const OwnerProperties = () => {
                       p.image
                         ? p.image.startsWith("http")
                           ? p.image
-                          : `${import.meta.env.VITE_API_URL}${p.image}`
+                          : `${import.meta.env.VITE_API_BASE_URL}${p.image}`
                         : "/default-dorm.jpg"
                     }
                     alt={p.name}
@@ -588,7 +588,7 @@ const OwnerProperties = () => {
                       <img
                         src={
                           form.image.startsWith("/uploads")
-                            ? `${import.meta.env.VITE_API_URL}${form.image}`
+                            ? `${import.meta.env.VITE_API_BASE_URL}${form.image}`
                             : form.image || "/default-dorm.jpg"
                         }
                         alt="Preview"
@@ -732,7 +732,7 @@ const OwnerProperties = () => {
                       selectedProperty.image
                         ? selectedProperty.image.startsWith("http")
                           ? selectedProperty.image
-                          : `${import.meta.env.VITE_API_URL}${selectedProperty.image}`
+                          : `${import.meta.env.VITE_API_BASE_URL}${selectedProperty.image}`
                         : "/default-dorm.jpg"
                     }
                     alt={selectedProperty.name}

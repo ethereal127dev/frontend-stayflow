@@ -489,7 +489,7 @@ const ManageProperties = () => {
                   <img
                     src={
                       p.image && p.image.startsWith("/uploads")
-                        ? `http://localhost:5000${p.image}`
+                        ? `${import.meta.env.VITE_API_BASE_URL}${p.image}`
                         : "/default-dorm.jpg"
                     }
                     alt={p.name}
@@ -696,7 +696,7 @@ const ManageProperties = () => {
                             editData.imagePreview
                               ? editData.imagePreview // กรณีอัปโหลดใหม่
                               : editData.image?.startsWith("/uploads")
-                                ? `${import.meta.env.VITE_API_URL}${editData.image}` // รูปเดิมจาก backend
+                                ? `${import.meta.env.VITE_API_BASE_URL}${editData.image}` // รูปเดิมจาก backend
                                 : "/default-dorm.jpg"
                           }
                           alt="Preview"
@@ -774,7 +774,7 @@ const ManageProperties = () => {
                         ? typeof detailData.image === "string"
                           ? detailData.image.startsWith("http")
                             ? detailData.image
-                            : `${import.meta.env.VITE_API_URL}${detailData.image}`
+                            : `${import.meta.env.VITE_API_BASE_URL}${detailData.image}`
                           : URL.createObjectURL(detailData.image)
                         : "/default-dorm.jpg"
                     }

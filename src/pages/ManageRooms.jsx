@@ -223,7 +223,7 @@ const ManageRooms = () => {
                     <img
                       src={
                         p.image
-                          ? `${import.meta.env.VITE_API_URL}${p.image}`
+                          ? `${import.meta.env.VITE_API_BASE_URL}${p.image}`
                           : "/default-dorm.jpg"
                       }
                       alt={p.name}
@@ -376,10 +376,10 @@ const ManageRooms = () => {
               const statusBadge = getStatusBadge(r.status);
               const imageSrc = Array.isArray(r.images)
                 ? r.images.length > 0
-                  ? `${import.meta.env.VITE_API_URL}${r.images[0]}`
+                  ? `${import.meta.env.VITE_API_BASE_URL}${r.images[0]}`
                   : "/default-room.jpg"
                 : r.images
-                  ? `${import.meta.env.VITE_API_URL}${r.images}`
+                  ? `${import.meta.env.VITE_API_BASE_URL}${r.images}`
                   : "/default-room.jpg";
 
               return (
