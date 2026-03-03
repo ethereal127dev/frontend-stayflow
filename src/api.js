@@ -5,6 +5,8 @@ const API = axios.create({
   baseURL: `${import.meta.env.VITE_API_URL}`,
 });
 
+console.log("API URL:", import.meta.env.VITE_API_URL);
+
 // ใช้ตัวแปร global หรือ window เพื่อเก็บ callback
 let onUnauthorized = null;
 
